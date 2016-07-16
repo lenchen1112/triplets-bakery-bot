@@ -1,0 +1,64 @@
+{
+  "name": "triplets-bakery-bot",
+  "version": "0.0.1",
+  "description": "Bot of triplets bakery",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --cache --ext .js . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenchen1112/triplets-bakery-bot.git"
+  },
+  "engines": {
+    "node": "6.x"
+  },
+  "keywords": [
+    "koa",
+    "bot"
+  ],
+  "author": "lenchen1112",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lenchen1112/triplets-bakery-bot/issues"
+  },
+  "homepage": "https://github.com/lenchen1112/triplets-bakery-bot#readme",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "dotenv": "^2.0.0",
+    "koa": "^1.2.0",
+    "koa-bodyparser": "^2.2.0",
+    "koa-logger": "^1.3.0",
+    "koa-route": "^2.4.2",
+    "parse": "^1.9.0",
+    "request": "^2.73.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.0.1",
+    "eslint-config-airbnb-base": "^4.0.2",
+    "eslint-plugin-import": "^1.10.3",
+    "nodemon": "^1.9.2",
+    "pre-commit": "^1.1.3"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "no-console": 0,
+      "indent": [
+        "error",
+        4
+      ],
+      "dot-notation": [
+        2,
+        {
+          "allowKeywords": true
+        }
+      ]
+    }
+  },
+  "precommit": [
+    "lint"
+  ]
+}
