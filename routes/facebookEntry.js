@@ -18,9 +18,9 @@ module.exports.fbReply = router.post('/facebook/*', function* reply() {
     const echoText = parsedData.text;
 
     yield markSeen(senderId)
-          .then(loaderStart(senderId))
-          .then(sendTextMessage(senderId, echoText))
-          .then(loaderEnd(senderId))
+          .then(() => loaderStart(senderId))
+          .then(() => sendTextMessage(senderId, echoText))
+          .then(() => loaderEnd(senderId))
           .catch(error => console.log(error));
 
     this.status = 200;
